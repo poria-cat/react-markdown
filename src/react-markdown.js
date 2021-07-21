@@ -116,7 +116,7 @@ function ReactMarkdown(options) {
 
   /** @type {Root} */
   // @ts-ignore we’ll throw if it isn’t a root next.
-  const hastNode = processor.runSync(processor.parse(file), file)
+  const hastNode = processor.run(processor.parse(file), file)
 
   if (hastNode.type !== 'root') {
     throw new TypeError('Expected a `root` node')
